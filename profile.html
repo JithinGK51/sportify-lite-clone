@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musicify - Profile</title>
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <a href="dashboard.html">
+                    <i class="fa-brands fa-spotify"></i>
+                    <h1>Musicify</h1>
+                </a>
+            </div>
+            <div class="header-controls">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="assets/images/default-profile.jpg" alt="Profile" id="header-user-avatar">
+                    </div>
+                    <span id="header-user-name">User Name</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="user-dropdown-menu">
+                        <a href="dashboard.html">Dashboard</a>
+                        <a href="settings.html">Settings</a>
+                        <a href="#" id="logout-btn">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="profile-container">
+                <div class="profile-header">
+                    <h2>Profile</h2>
+                    <button id="edit-profile-btn" class="btn-edit">
+                        <i class="fas fa-edit"></i>
+                        Edit
+                    </button>
+                </div>
+                
+                <!-- Profile View -->
+                <div id="profile-view" class="profile-section active">
+                    <div class="profile-avatar">
+                        <img src="assets/images/default-profile.jpg" alt="Profile" id="profile-avatar">
+                    </div>
+                    <div class="profile-info">
+                        <div class="info-item">
+                            <label>Name</label>
+                            <p id="profile-name">User Name</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Email</label>
+                            <p id="profile-email">user@example.com</p>
+                        </div>
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <span id="playlists-count">0</span>
+                                <p>Playlists</p>
+                            </div>
+                            <div class="stat-item">
+                                <span id="liked-songs-count">0</span>
+                                <p>Liked Songs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Profile Edit -->
+                <div id="profile-edit" class="profile-section">
+                    <form id="profile-form">
+                        <div class="profile-avatar-edit">
+                            <img src="assets/images/default-profile.jpg" alt="Profile" id="profile-avatar-preview">
+                            <div class="avatar-controls">
+                                <label for="profile-pic-input" class="btn-upload">
+                                    <i class="fas fa-upload"></i>
+                                    Upload Photo
+                                </label>
+                                <input type="file" id="profile-pic-input" accept="image/*" hidden>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-name">Name</label>
+                            <input type="text" id="edit-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-email">Email</label>
+                            <input type="email" id="edit-email" required disabled>
+                            <small>Email cannot be changed</small>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" id="cancel-edit-btn" class="btn-cancel">Cancel</button>
+                            <button type="submit" class="btn-save">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Recent Activity -->
+                <div class="activity-section">
+                    <h3>Recent Activity</h3>
+                    <div id="recent-activity" class="activity-list">
+                        <!-- Activity items will be dynamically added here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html> 

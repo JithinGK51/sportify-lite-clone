@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musicify - Settings</title>
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <a href="dashboard.html">
+                    <i class="fa-brands fa-spotify"></i>
+                    <h1>Musicify</h1>
+                </a>
+            </div>
+            <div class="header-controls">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="assets/images/default-profile.jpg" alt="Profile" id="header-user-avatar">
+                    </div>
+                    <span id="header-user-name">User Name</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="user-dropdown-menu">
+                        <a href="dashboard.html">Dashboard</a>
+                        <a href="profile.html">Profile</a>
+                        <a href="#" id="logout-btn">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="settings-container">
+                <div class="settings-header">
+                    <h2>Settings</h2>
+                </div>
+                
+                <!-- Account Settings -->
+                <section class="settings-section">
+                    <h3>Account Settings</h3>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h4>Change Password</h4>
+                            <p>Update your password for better security</p>
+                        </div>
+                        <button id="change-password-btn" class="btn-action">
+                            <i class="fas fa-key"></i>
+                            Change Password
+                        </button>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h4>Delete Account</h4>
+                            <p>Permanently delete your account and all data</p>
+                        </div>
+                        <button id="delete-account-btn" class="btn-action danger">
+                            <i class="fas fa-trash-alt"></i>
+                            Delete Account
+                        </button>
+                    </div>
+                </section>
+                
+                <!-- Notification Settings -->
+                <section class="settings-section">
+                    <h3>Notification Settings</h3>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h4>Email Notifications</h4>
+                            <p>Receive email notifications about new features</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="email-notifications" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h4>New Music Alerts</h4>
+                            <p>Get notified when new music is added</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="music-alerts" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </section>
+                
+                <!-- Privacy Settings -->
+                <section class="settings-section">
+                    <h3>Privacy Settings</h3>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h4>Public Profile</h4>
+                            <p>Allow others to see your profile information</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="public-profile">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h4>Share Listening Activity</h4>
+                            <p>Share what you're listening to with others</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="share-activity" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </section>
+                
+                <!-- App Settings -->
+                <section class="settings-section">
+                    <h3>App Settings</h3>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h4>Language</h4>
+                            <p>Choose your preferred language</p>
+                        </div>
+                        <select id="language-select" class="select-box">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                            <option value="de">Deutsch</option>
+                        </select>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h4>Theme</h4>
+                            <p>Choose your preferred app theme</p>
+                        </div>
+                        <select id="theme-select" class="select-box">
+                            <option value="dark">Dark</option>
+                            <option value="light">Light</option>
+                        </select>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h4>Audio Quality</h4>
+                            <p>Set your preferred audio streaming quality</p>
+                        </div>
+                        <select id="quality-select" class="select-box">
+                            <option value="auto">Auto (Recommended)</option>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Change Password Modal -->
+    <div class="modal" id="change-password-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Change Password</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="change-password-form">
+                    <div class="form-group">
+                        <label for="current-password">Current Password</label>
+                        <input type="password" id="current-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">New Password</label>
+                        <input type="password" id="new-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm New Password</label>
+                        <input type="password" id="confirm-password" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Change Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/settings.js"></script>
+</body>
+</html> 

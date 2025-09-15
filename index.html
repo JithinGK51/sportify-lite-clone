@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musicify - Login/Signup</title>
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo">
+                <i class="fa-brands fa-spotify"></i>
+                <h1>Musicify</h1>
+            </div>
+            <div class="tagline">
+                <h2>Music for everyone.</h2>
+                <p>Millions of songs. No credit card needed.</p>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="form-container">
+                <div class="form-tabs">
+                    <button class="tab-btn active" id="login-tab">Login</button>
+                    <button class="tab-btn" id="signup-tab">Sign Up</button>
+                </div>
+                
+                <!-- Login Form -->
+                <form id="login-form" class="active-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required>
+                        <i class="fa-solid fa-eye toggle-password"></i>
+                    </div>
+                    <div class="form-group remember-me">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">Remember me</label>
+                    </div>
+                    <button type="submit" class="btn-submit">LOG IN</button>
+                    <div class="forgot-password">
+                        <a href="#">Forgot your password?</a>
+                    </div>
+                </form>
+                
+                <!-- Signup Form -->
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="signup-name">Name</label>
+                        <input type="text" id="signup-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" required>
+                        <i class="fa-solid fa-eye toggle-password"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm-password">Confirm Password</label>
+                        <input type="password" id="signup-confirm-password" required>
+                        <i class="fa-solid fa-eye toggle-password"></i>
+                    </div>
+                    <button type="submit" class="btn-submit">SIGN UP</button>
+                </form>
+                
+                <div class="oauth-options">
+                    <p>Or continue with</p>
+                    <div class="oauth-buttons">
+                        <button class="oauth-btn google">
+                            <i class="fa-brands fa-google"></i>
+                        </button>
+                        <button class="oauth-btn facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </button>
+                        <button class="oauth-btn apple">
+                            <i class="fa-brands fa-apple"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html> 
