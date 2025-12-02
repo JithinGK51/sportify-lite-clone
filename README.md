@@ -243,6 +243,7 @@ If you encounter any issues or have questions:
 <div align="center">
 
 **Made with ❤️ by [JithinGK51](https://github.com/JithinGK51)**
+** view the site (https://jithingk51.github.io/sportify-lite-clone/).**
 
 ⭐ **Star this repository if you found it helpful!** ⭐
 
